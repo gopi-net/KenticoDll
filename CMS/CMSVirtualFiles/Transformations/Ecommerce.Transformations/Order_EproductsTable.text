@@ -1,0 +1,3 @@
+﻿<br />
+- {%GetResourceString(OrderItemSKUName)%} (<a href="{%GetEproductUrl(Token, FileName, OrderSiteID)%}" target="_blank" >{%FileName%}</a>)
+{%IfEmpty(OrderItemValidTo, "never expires", "expires after " + OrderItemValidTo)%}

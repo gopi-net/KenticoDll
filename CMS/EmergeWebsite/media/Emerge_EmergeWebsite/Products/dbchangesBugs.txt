@@ -1,0 +1,27 @@
+1671
+
+
+AND ClassName not like '%[_]INTERN'
+
+Custom table field limits on the server  done
+
+Error Page
+
+TableName Changes _INTERN
+
+Emerge.CC.CheerCardForm.Literal.PatientFirstName
+Emerge.CC.CheerCardForm.Literal.PatientLastName
+
+Patient's First Name:<font color="red">*</font>
+Patient's Last Name:<font color="red">*</font>
+
+code review 1721
+
+1618,1671,1720 - personalized message limit error, Patient FNLN manadatory, error while data search
+
+Merging changes for bug: 1618,1671,1720 - personalized message limit error, Patient FNLN manadatory, error while data search
+
+Merging changes in QA branch for bug: 1618,1671,1720 - personalized message limit error, Patient FNLN manadatory, error while data search: these changes already code reviewed
+
+
+~/Mobile/Home

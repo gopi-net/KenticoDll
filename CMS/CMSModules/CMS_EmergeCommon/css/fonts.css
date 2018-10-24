@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'zapfchan_md_btmedium';
+    src: url('../fonts/zafcham-webfont.eot');
+    src: url('../fonts/zafcham-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/zafcham-webfont.woff') format('woff'),
+    url('../fonts/zafcham-webfont.ttf') format('truetype'),
+    url('../fonts/zafcham-webfont.svg#zapfchan_md_btmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

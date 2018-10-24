@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="UniqueTextField.ascx.cs" Inherits="CMSFormControls_EmergeFormControls_UniqueTextField" %>
+<cms:CMSTextBox runat="server" ID="FieldText" CssClass="TextBoxField"  ></cms:CMSTextBox >

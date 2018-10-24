@@ -1,0 +1,9 @@
+The upgrade files were copied into the target directory with the '.new' extension. Merge your custom changes into these files and remove the '.new' extensions afterwards.
+C:\Emerge\Kentico8\CMS\CMS\App_Code\Application\CMSHttpApplication.cs
+C:\Emerge\Kentico8\CMS\CMS\CMSAdminControls\ModalCalendar\Themes\Default\jquery-ui-1.8.7.custom.css
+C:\Emerge\Kentico8\CMS\CMS\CMSAdminControls\UI\UniGrid\Controls\AdvancedExport.ascx
+C:\Emerge\Kentico8\CMS\CMS\CMSAdminControls\UI\UniGrid\Controls\AdvancedExport.ascx.cs
+C:\Emerge\Kentico8\CMS\CMS\CMSMessages\Error.aspx.cs
+C:\Emerge\Kentico8\CMS\CMS\CMSModules\CustomTables\Controls\CustomTableDataList.ascx.cs
+C:\Emerge\Kentico8\CMS\CMS\CMSModules\CustomTables\Controls\CustomTableViewItem.ascx.cs
+C:\Emerge\Kentico8\CMS\CMS\CMSPages\PortalTemplate.aspx.cs

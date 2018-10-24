@@ -1,0 +1,2 @@
+The hotfix files were copied into the target directory with the '.new' extension. Merge your custom changes into these files and remove the '.new' extensions afterwards.
+D:\EMERGE\Projects\Emerge2.0\Emerge.Sprint-11\EmergeWebsite\CMSModules\CustomTables\Controls\CustomTableDataList.ascx.cs

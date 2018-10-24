@@ -1,0 +1,4 @@
+﻿<tr>
+<td>{%GetResourceString(TaxClassDisplayName)%}</td>
+<td>{%TaxSummary.Format(Currency.CurrencyFormatString)|(user)chandaranik|(hash)6636b75460dff40d23e59ef8d5b478cffdc58283404a500e3e5352ececabb478%}</td>
+</tr>

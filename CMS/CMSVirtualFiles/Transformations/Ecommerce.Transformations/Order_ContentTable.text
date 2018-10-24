@@ -1,0 +1,11 @@
+﻿<tr>
+<td style="text-align: left">{%(IsProductOption) ? "&nbsp;&nbsp;-&nbsp;" : ""%}{%Localize(SKUName)|(encode)%}
+{%(CartItemText != "") ? (" '" + CartItemText + "'") : ""|(encode)%}
+{%SKUNumber%}
+  </td>
+<td>{%Units%}</td>
+<td>{%UnitPrice.Format("{0:F}")|(user)chandaranik|(hash)b65aaa0aedfd7d97e5917f8f21f0dd075ccde3b3ade0ae7e24376904a88a452c%}</td>
+{% (ShoppingCart.IsDiscountApplied) ? ("<td>" + UnitTotalDiscount.Format("{0:F}") + "</td>") : "" |(user)chandaranik|(hash)21f2586e66fa921fbaa43b9b582a919e017aad4b621ca88d314cedbf12c4aa17%}
+<td>{%TotalTax.Format("{0:F}")|(user)chandaranik|(hash)2fa276586ae378cbaa30be75499581dd0678fd1954e36e9dc1a0e99881ffcc49%}</td>
+<td>{%TotalPrice.Format(Currency.CurrencyFormatString)|(user)chandaranik|(hash)8c028a347c77d4c97a9e76b4db2bc6df6be068538e45c5b640f5577dbb7fd3a0%}</td>
+</tr>

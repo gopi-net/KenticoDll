@@ -1,0 +1,5 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="CMS.DocumentEngine.Web.UI.CMSTransformation" %><%@ Register TagPrefix="cms" Namespace="CMS.DocumentEngine.Web.UI" Assembly="CMS.DocumentEngine.Web.UI" %>
+<%@ Register TagPrefix="cc1" Namespace="CMS.DocumentEngine.Web.UI" Assembly="CMS.DocumentEngine.Web.UI" %><strong><a href="#FAQLink<%# Eval("FAQID") %>" id="FAQLink<%# Eval("FAQID") %>" onclick="javascript: if (document.getElementById('FAQ<%# Eval("FAQID") %>').style.display == 'none') {document.getElementById('FAQ<%# Eval("FAQID") %>').style.display = 'block'} else {document.getElementById('FAQ<%# Eval("FAQID") %>').style.display = 'none'};"><%# Eval("FAQQuestion",true) %></a></strong><br />
+<div id="FAQ<%# Eval("FAQID") %>" style="display:none">
+<%# Eval("FAQAnswer") %><br/>
+</div>

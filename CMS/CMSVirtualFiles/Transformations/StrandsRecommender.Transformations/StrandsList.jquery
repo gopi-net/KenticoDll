@@ -1,0 +1,22 @@
+﻿{%/*  
+
+For more information about custom layout transformation, please refer to our documentation: https://docs.kentico.com/x/CYJsAw
+For available fields, please refer to Strands Recommender documentation: http://recommender.strands.com/developers/#advRenderer
+
+*/|(user)chandaranik|(hash)d2502b636ff515d3f2802a4491d8228234b7add62518a4c790ece7071a8dc37e%}
+<div class="strandsLinkTemplate">
+  <h1 class="uiLight">
+    Recommendation title
+  </h1>
+  <ul>
+    {{each(i, rec) recommendations}}
+    <li>
+      <a href="${rec.metadata.link}" onclick="SBS.Tracking.onRecClick('${rec.itemId}','${tpl}','${rrq}');return true;" >
+        <img src="${rec.metadata.picture}" alt="${rec.metadata.name}" />
+        <h2 class="uiLight">${rec.metadata.name}</h2>
+      </a>
+      <span clas="price">{% ECommerceContext.CurrentCurrency != null ? string.FormatString(ECommerceContext.CurrentCurrency.CurrencyFormatString, "${rec.metadata.price}") : "${rec.metadata.price}" |(user)chandaranik|(hash)85a5b511e758bc2ffb1b56d300db6b6a3d90e18762440ce7c709bd0347825f76%}</span>
+    </li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+﻿<item>
+  <id>{% ItemID %}</id> 
+  {% foreach (document in LanguageVersions) { %}
+     {% cultureCode = document.DocumentCulture.Replace("-", "").ToLower();; #%}
+    <title_{% cultureCode %}><![CDATA[{% document.DocumentName #%}]]></title_{% cultureCode %}>
+    <url_{% cultureCode %}><![CDATA[{% document.AbsoluteUrl + "?lang=" + document.DocumentCulture #%}]]></url_{% cultureCode %}>
+    <description_{% cultureCode %}><![CDATA[{% document.DocumentSKUDescription %}]]></description_{% cultureCode %}>
+  {% } |(user)administrator|(hash)4d405426fe1948f19c049e3c485d246ada1118870a8f2eef67ba0ed1a142579e%}
+  
+  {% foreach (currency in Currencies) { %}
+    {% currencyCode = currency.CurrencyCode.ToLower();; #%}
+    <price_{% currencyCode %}>{% Math.Round(SKU.GetPrice(currency), currency.CurrencyRoundTo, "AwayFromZero") %}</price_{% currencyCode %}>
+    <cur_{% currencyCode %}>{% currency.CurrencyCode %}</cur_{% currencyCode %}>
+  {% } |(user)administrator|(hash)860eb612a9b237bf177efaf9a93091b1a0583d2ce9ae997e96184b09f9df9a8b%}
+  
+  <price>{% SKU.SKUPrice |(user)chandaranik|(hash)39bbf3a61f885df2037bc72ae9a559090a2766bc988e8383c6d4001f4f801b66%}</price>
+  <image_link><![CDATA[{% GetAbsoluteUrl(SKU.SKUImagePath) |(user)chandaranik|(hash)1d1c268a0dda46d76cb5c77173f51dec238a41677059f063efd2b1ff03c4f41d%}]]></image_link>
+  <category>{% ItemCategory %}</category>
+  <SKUDepartmentID>{% SKU.SKUDepartmentID |(user)chandaranik|(hash)5dbe6b1f37624c69158bbfc487a6fac8f1362a8ad64c684558fd5af80df26dba%}</SKUDepartmentID>
+  <SKUProductType><![CDATA[{% SKU.SKUProductType |(user)chandaranik|(hash)c01819292421fecdd132dabf45c31be02a52aa942990cf2cbd39dbc03e7deb99%}]]></SKUProductType>
+  <SKUSupplierID>{% SKU.SKUSupplierID |(user)chandaranik|(hash)d37092542b57463c36e839370befc9abd629a076468467c70f41b5c8fcdcfd70%}</SKUSupplierID>
+  <SKUManufacturerID>{% SKU.SKUManufacturerID |(user)chandaranik|(hash)7d479a23e43267506803f9cf965a1f156962251bddee2694c3e6fe4fafc1a75a%}</SKUManufacturerID>
+</item>

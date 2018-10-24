@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Permissions>
+  <Permission>
+    <ActionName>moveup</ActionName>
+    <PermissionName>Modify</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>movedown</ActionName>
+    <PermissionName>Modify</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>activate</ActionName>
+    <PermissionName>Modify</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>deactivate</ActionName>
+    <PermissionName>Modify</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>delete</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>deleteschedule</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>deletelicense</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+<Permission>
+    <ActionName>deleteoccurence</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>deleteevents</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>deactivatevolunteeruser</ActionName>
+    <PermissionName>Modify</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>activatevolunteeruser</ActionName>
+    <PermissionName>Modify</PermissionName>
+  </Permission>
+<Permission>
+    <ActionName>deletevolunteeruser</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>deleteregistrations</ActionName>
+    <PermissionName>Delete</PermissionName>
+  </Permission>
+  <Permission>
+    <ActionName>printcheercard</ActionName>
+    <PermissionName>Read</PermissionName>
+  </Permission>
+</Permissions>

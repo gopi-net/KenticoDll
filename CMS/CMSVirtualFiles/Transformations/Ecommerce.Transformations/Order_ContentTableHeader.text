@@ -1,0 +1,12 @@
+﻿<table class="productsList" width="100%" cellspacing="0" cellpadding="2" style="text-align: right">
+  <thead>
+    <tr>
+      <th style="text-align: left;padding-left:2px">{%GetResourceString("InvoiceTemplate.SKUName")|(user)chandaranik|(hash)ba484868032161c44eb1b47c21196edb3d80b4da9d4e5b9f2e810d179e5ed6b9%}</th>
+      <th>{%GetResourceString("InvoiceTemplate.SKUUnits")|(user)chandaranik|(hash)722e028cadbe388d28171ef82442c11357b80624ba1fc75a7fe0b0cd65ea95bd%}</th>
+      <th>{%GetResourceString("InvoiceTemplate.SKUPrice")|(user)chandaranik|(hash)aa02522affb3e91152af6249f19c1f82aebbfc73e116a027ef04d770cddce67f%}</th>
+      {% (ShoppingCart.IsDiscountApplied) ? ("<th>" + GetResourceString("InvoiceTemplate.UnitDiscount") + "</th>") : "" |(user)chandaranik|(hash)5833e1a4728277325276a30380c4ca38089e9513768910f5d07a31edca9dac3d%}
+      <th>{%GetResourceString("InvoiceTemplate.Tax")|(user)chandaranik|(hash)5b2a7105d75fb040aed22c5e3d56b70004e08cc64512811a9e191db285b94fbb%}</th>
+      <th>{%GetResourceString("InvoiceTemplate.Subtotal")|(user)chandaranik|(hash)c3c0dd12f6f2ca75f7c299c37f690869d257e4672ebbaaad4d3016e2064da6a0%}</th>
+    </tr>
+  </thead>
+  <tbody>

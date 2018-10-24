@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+WARNING: DO NOT MODIFY this file, it is used for the web publish process.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a6a22d93-3a0a-47da-b9dc-44ebb5c012cf}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/CMS</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SourceWebProject>http://localhost:49209</SourceWebProject>
+    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/2/ROOT</SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bluespire.Emerge.CommonService\Bluespire.Emerge.CommonService.csproj">
+      <Project>{BC7E72F9-C9E5-452E-83C5-681876E0D3E9}</Project>
+      <Name>Bluespire.Emerge.CommonService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Common\Bluespire.Emerge.Common.csproj">
+      <Project>{007000C5-02AA-4563-AE2A-29EE077EE1B8}</Project>
+      <Name>Bluespire.Emerge.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.Careers\Bluespire.Emerge.Components.Career.csproj">
+      <Project>{32A491AE-8C10-4515-877F-0E7C6BD32707}</Project>
+      <Name>Bluespire.Emerge.Components.Career</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.CheerCard\Bluespire.Emerge.Components.CheerCard.csproj">
+      <Project>{AB9442F7-AC43-4050-836A-A50A61D8AD5C}</Project>
+      <Name>Bluespire.Emerge.Components.CheerCard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.Donation\Bluespire.Emerge.Components.Donation.csproj">
+      <Project>{265AA0FA-68F0-43BE-AE9E-1D99AB3975D8}</Project>
+      <Name>Bluespire.Emerge.Components.Donation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.EventsCalendar\Bluespire.Emerge.Components.EventsCalendar.csproj">
+      <Project>{645A8540-5FA1-4701-8F60-450E4BA0E537}</Project>
+      <Name>Bluespire.Emerge.Components.EventsCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.GenericParsing\Bluespire.Emerge.Components.GenericParsing.csproj">
+      <Project>{ADD325F8-CBD9-43FE-850D-E2F34D736C9D}</Project>
+      <Name>Bluespire.Emerge.Components.GenericParsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.GiftShop\Bluespire.Emerge.Components.GiftShop.csproj">
+      <Project>{45E4AFB7-3A6B-4C57-A530-FB2BD79C5B34}</Project>
+      <Name>Bluespire.Emerge.Components.GiftShop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.Location\Bluespire.Emerge.Components.Location.csproj">
+      <Project>{4EAFED96-FF92-402B-A2D2-21795034A7B8}</Project>
+      <Name>Bluespire.Emerge.Components.Location</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.Physician\Bluespire.Emerge.Components.StaffDirectory.csproj">
+      <Project>{585DF3C5-A17F-4571-B30F-44D484F61590}</Project>
+      <Name>Bluespire.Emerge.Components.StaffDirectory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.PreRegistration\Bluespire.Emerge.Components.PreRegistration.csproj">
+      <Project>{DFAF40A2-834E-4AA7-B34B-6B3011DF6919}</Project>
+      <Name>Bluespire.Emerge.Components.PreRegistration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Components.Rates\Bluespire.Emerge.Components.Rates.csproj">
+      <Project>{5B17D51A-BF80-485B-9DDC-7B5DFBF55EE3}</Project>
+      <Name>Bluespire.Emerge.Components.Rates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Web\Bluespire.Emerge.Web.csproj">
+      <Project>{366A1E03-30B5-442E-841A-1E2CF2050B95}</Project>
+      <Name>Bluespire.Emerge.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenseGenerator\EmergeLicenseManager\Bluespire.Emerge.LicenseManager.csproj">
+      <Project>{A0FDCC0D-2191-4CA7-9510-B6C8FF06CBD4}</Project>
+      <Name>Bluespire.Emerge.LicenseManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

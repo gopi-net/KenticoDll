@@ -1,0 +1,7 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="CMS.DocumentEngine.Web.UI.CMSTransformation" %><%@ Register TagPrefix="cms" Namespace="CMS.DocumentEngine.Web.UI" Assembly="CMS.DocumentEngine.Web.UI" %>
+<%@ Register TagPrefix="cc1" Namespace="CMS.DocumentEngine.Web.UI" Assembly="CMS.DocumentEngine.Web.UI" %><strong>Document <%# Eval("ows_LinkFilename") %></strong><br />
+Id: <%# Eval("ows_ID") %> <br/>
+Modified: <%# Eval("ows_Modified") %> <br/>
+Created: <%# SharePointFunctions.SplitSharePointField(EvalHTML("ows_Created Date"),1) %> <br/>
+Location: <%# SharePointFunctions.SplitSharePointField(EvalHTML("ows_FileRef"),1) %> <br/>
+

@@ -1,0 +1,4 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="CMS.DocumentEngine.Web.UI.CMSTransformation" %><%@ Register TagPrefix="cms" Namespace="CMS.DocumentEngine.Web.UI" Assembly="CMS.DocumentEngine.Web.UI" %>
+<%@ Register TagPrefix="cc1" Namespace="CMS.DocumentEngine.Web.UI" Assembly="CMS.DocumentEngine.Web.UI" %><strong><a href="<%# GetDocumentUrl(Eval("CommentPostDocumentID")) %>#comments" ><%# GetDateTime(Eval("CommentDate")).ToString("d") %></a></strong><br />
+<strong><%# TrimSitePrefix(Eval("CommentUserName", true)) %></strong><br />
+<%# HTMLEncode(LimitLength(Eval("CommentText"), 62, "...")) %><br /><br />

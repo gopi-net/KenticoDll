@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grid>
+  <actions>
+    <action name="edit" commandargument="itemid" externalsourcename="edit" caption="$General.Edit$" fonticonclass="icon-edit" fonticonstyle="allow" />
+    <action name="delete" commandargument="itemid" caption="$Emerge.EmergeUniGrid.General.Caption.Delete$" fonticonclass="icon-bin" fonticonstyle="critical" confirmation="$Emerge.EmergeUniGrid.General.ConfirmMessage.Delete$"/>
+    <action name="view" commandargument="itemid" externalsourcename="view" caption="$Emerge.EmergeUniGrid.General.Caption.ViewApplication$" fonticonclass="icon-eye" fonticonstyle="allow"  />
+  </actions>
+  <columns>
+    <column name="JobTitle" source="JobTitle" caption="JobTitle" />
+    <column name="ApplicantFirstName" source="ApplicantFirstName" caption="Applicant First Name" />
+    <column name="ApplicantMiddleName" source="ApplicantLastName" caption="Applicant Middle Name" />
+    <column name="ApplicantLastName" source="ApplicantLastName" caption="Applicant Last Name"/>
+  </columns>
+  <options>
+    <key name="DisplayFilter" value="true" />
+  </options>
+</grid>

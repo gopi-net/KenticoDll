@@ -1,0 +1,9 @@
+﻿{%IfEmpty(Customer.CustomerCompany, "", HTMLEncode(Customer.CustomerCompany) + "<br />")|(user)chandaranik|(hash)a522a24a80192b3d3a1ac91a6755d1f519525fdd08d22178c896260663cfe10c%}
+{%IfEmpty(Customer.CustomerTaxRegistrationID, "", "Tax registration ID: " + HTMLEncode(Customer.CustomerTaxRegistrationID) + "<br />")|(user)chandaranik|(hash)2b662a4438d4054ecca03b5ed73412ac0151a41937ce5ee77544fa4d2944b4db%}
+{%IfEmpty(Customer.CustomerOrganizationID, "", "Organization ID: " + HTMLEncode(Customer.CustomerOrganizationID) + "<br />")|(user)chandaranik|(hash)c4855d76f9ed91e7a0bfc8c5d39fd207b6677cc36d97fafb0914f3d05d542700%}
+{%AddressPersonalName|(encode)%}<br />
+{%AddressLine1|(encode)%}<br />
+{%IfEmpty(AddressLine2, "", HTMLEncode(AddressLine2) + "<br />")%}
+{%AddressCity|(encode)%}<br />
+{%AddressZip|(encode)%}<br />
+{%Localize(Country.CountryDisplayName)|(user)chandaranik|(hash)88d090420ca2d6218f7ed1527f3346b71a16061ea80ca0d16942479dd7c2bbfb%} {%IfEmpty(State, "", ", " + Localize(State.StateDisplayName))|(user)chandaranik|(hash)fb03aa16c54781a474dd16eccf686ea6a2f8998a3b9a95fa6e2c1c3d891fbc59%}

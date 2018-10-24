@@ -1,0 +1,26 @@
+﻿using CMS.UIControls;
+using System;
+using Bluespire.Emerge.Components.GiftShop.Pages;
+
+
+public partial class CMSModules_CMS_GiftShop_Dashboard : GiftShopDashboardPage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        toolsUiPanelMenu.CategoryCreated += toolsUiPanelMenu_CategoryCreated;
+    }
+
+
+    private void toolsUiPanelMenu_CategoryCreated(object sender, CMSAdminControls_UI_UIProfiles_UIPanelMenu.CategoryCreatedEventArgs e)
+    {
+        // Cancel category if it is not available
+        if (e.UIElement != null)
+        {
+            // Check site availabitility
+            if (!CMSContext.CurrentUser.IsAuthorizedPerUIElement("CMS.GiftShop", e.UIElement.ElementName, true))
+            {
+                e.Cancel = true;
+            }
+        }
+    }
+}
