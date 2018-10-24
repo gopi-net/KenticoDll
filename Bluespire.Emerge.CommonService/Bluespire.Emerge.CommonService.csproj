@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC7E72F9-C9E5-452E-83C5-681876E0D3E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bluespire.Emerge.CommonService</RootNamespace>
+    <AssemblyName>Bluespire.Emerge.CommonService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Base">
+      <HintPath>..\CMS\bin\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.Base.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core">
+      <HintPath>..\CMS\bin\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\CMS\bin\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\CMS\bin\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine">
+      <HintPath>..\CMS\bin\CMS.DocumentEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.DocumentEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EmailEngine">
+      <HintPath>..\CMS\bin\CMS.EmailEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine">
+      <HintPath>..\CMS\bin\CMS.FormEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.FormEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\CMS\bin\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO, Version=8.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MacroEngine">
+      <HintPath>..\CMS\bin\CMS.MacroEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary">
+      <HintPath>..\CMS\bin\CMS.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership">
+      <HintPath>..\CMS\bin\CMS.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MembershipProvider">
+      <HintPath>..\CMS\bin\CMS.MembershipProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine, Version=8.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider">
+      <HintPath>..\CMS\bin\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics">
+      <HintPath>..\CMS\bin\CMS.WebAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalCoreSDK, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\PayPalCoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPallTestProject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\PayPallTestProject.dll</HintPath>
+    </Reference>
+    <Reference Include="paypal_base, Version=5.6.60.0, Culture=neutral, PublicKeyToken=b37401294aaf5617">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\paypal_base.dll</HintPath>
+    </Reference>
+    <Reference Include="RestApiSDK, Version=0.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\RestApiSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization\AuthorizationService.cs" />
+    <Compile Include="Caching\EmergeCacheHelper.cs" />
+    <Compile Include="Caching\EmergeCustomQuery.cs" />
+    <Compile Include="Caching\EmergeCustomTable.cs" />
+    <Compile Include="Caching\ICacheable.cs" />
+    <Compile Include="ConfigurationHelper.cs" />
+    <Compile Include="CustomMacroMethods\CustomMacroMethodLoader.cs" />
+    <Compile Include="CustomMacroMethods\CustomMacroMethods.cs" />
+    <Compile Include="CustomTableDataHelper.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Email\EmailMessageInfo.cs" />
+    <Compile Include="Email\EmailService.cs" />
+    <Compile Include="EmergeRelationHelper.cs" />
+    <Compile Include="EmergeStaticHelper.cs" />
+    <Compile Include="ExceptionHandler.cs" />
+    <Compile Include="GeocodingAPIHelper.cs" />
+    <Compile Include="GridActions\GridActionFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\GridActivateAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\GridCustomTableEditAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\GridDeactivateAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\GridDeleteAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\GridDeleteLicenseAction.cs" />
+    <Compile Include="GridActions\GridMoveDownAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\GridMoveUpAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridActivateAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridCustomTableEditAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridDeactivateAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridDeleteAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridMoveDownAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridActions\IGridMoveUpAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryTracker\HistoryTrackerInfo.cs" />
+    <Compile Include="HistoryTracker\HistoryTrackerService.cs" />
+    <Compile Include="License\LicenseProvider.cs" />
+    <Compile Include="MaintenanceService.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="PaymentGateway\AuthorizeNetPayment.cs" />
+    <Compile Include="PaymentGateway\GatewayType\AuthorizeNet.cs" />
+    <Compile Include="PaymentGateway\GatewayType\Orbital.cs" />
+    <Compile Include="PaymentGateway\GatewayType\PayPalProvider.cs" />
+    <Compile Include="PaymentGateway\Interface\IPaymentGateway.cs" />
+    <Compile Include="PaymentGateway\Interface\IPaymentGatewayFactory.cs" />
+    <Compile Include="PaymentGateway\Interface\IPaymentGatewayValidate.cs" />
+    <Compile Include="PaymentGateway\OrbitalPayment.cs" />
+    <Compile Include="PaymentGateway\Payment.cs" />
+    <Compile Include="PaymentGateway\PaymentGatewayFactory.cs" />
+    <Compile Include="PaymentGateway\PayPalPayment.cs" />
+    <Compile Include="PaymentGateway\PayPalWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="UniGridTemplateField.cs" />
+    <Compile Include="Unity\EmergeUnityFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bluespire.Emerge.Common\Bluespire.Emerge.Common.csproj">
+      <Project>{007000c5-02aa-4563-ae2a-29ee077ee1b8}</Project>
+      <Name>Bluespire.Emerge.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenseGenerator\EmergeLicenseManager\Bluespire.Emerge.LicenseManager.csproj">
+      <Project>{a0fdcc0d-2191-4ca7-9510-b6c8ff06cbd4}</Project>
+      <Name>Bluespire.Emerge.LicenseManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AjaxMin.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.CommonService.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.LicenseManager.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.LicenseManager.pdb" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\CMS.Base.dll" />
+    <Content Include="bin\Debug\CMS.Base.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.Base.Web.UI.XML" />
+    <Content Include="bin\Debug\CMS.Core.dll" />
+    <Content Include="bin\Debug\CMS.Core.xml" />
+    <Content Include="bin\Debug\CMS.CustomTables.dll" />
+    <Content Include="bin\Debug\CMS.DataEngine.dll" />
+    <Content Include="bin\Debug\CMS.DataEngine.xml" />
+    <Content Include="bin\Debug\CMS.DocumentEngine.dll" />
+    <Content Include="bin\Debug\CMS.DocumentEngine.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.DocumentEngine.Web.UI.xml" />
+    <Content Include="bin\Debug\CMS.DocumentEngine.xml" />
+    <Content Include="bin\Debug\CMS.EmailEngine.dll" />
+    <Content Include="bin\Debug\CMS.EmailEngine.xml" />
+    <Content Include="bin\Debug\CMS.EventLog.dll" />
+    <Content Include="bin\Debug\CMS.EventLog.xml" />
+    <Content Include="bin\Debug\CMS.FormEngine.dll" />
+    <Content Include="bin\Debug\CMS.FormEngine.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.FormEngine.Web.UI.xml" />
+    <Content Include="bin\Debug\CMS.FormEngine.xml" />
+    <Content Include="bin\Debug\CMS.Helpers.dll" />
+    <Content Include="bin\Debug\CMS.Helpers.xml" />
+    <Content Include="bin\Debug\CMS.IO.dll" />
+    <Content Include="bin\Debug\CMS.IO.xml" />
+    <Content Include="bin\Debug\CMS.MacroEngine.dll" />
+    <Content Include="bin\Debug\CMS.MacroEngine.xml" />
+    <Content Include="bin\Debug\CMS.MediaLibrary.dll" />
+    <Content Include="bin\Debug\CMS.MediaLibrary.xml" />
+    <Content Include="bin\Debug\CMS.Membership.dll" />
+    <Content Include="bin\Debug\CMS.Membership.xml" />
+    <Content Include="bin\Debug\CMS.MembershipProvider.dll" />
+    <Content Include="bin\Debug\CMS.MembershipProvider.xml" />
+    <Content Include="bin\Debug\CMS.PortalEngine.dll" />
+    <Content Include="bin\Debug\CMS.PortalEngine.xml" />
+    <Content Include="bin\Debug\CMS.SiteProvider.dll" />
+    <Content Include="bin\Debug\CMS.SiteProvider.xml" />
+    <Content Include="bin\Debug\CMS.UIControls.xml" />
+    <Content Include="bin\Debug\CMS.WebAnalytics.dll" />
+    <Content Include="bin\Debug\CMS.WebAnalytics.xml" />
+    <Content Include="bin\Debug\ContinuousIntegration.exe" />
+    <Content Include="bin\Debug\GlobalLink.ProjectDirector.WebServices.dll" />
+    <Content Include="bin\Debug\HealthMonitoringService.exe" />
+    <Content Include="bin\Debug\Interop.IWshRuntimeLibrary.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.xml" />
+    <Content Include="bin\Debug\Kentico.Google.Apis.dll" />
+    <Content Include="bin\Debug\LinkedIn.dll" />
+    <Content Include="bin\Debug\LinqToTwitter.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\Lucene.Net.v3.dll" />
+    <Content Include="bin\Debug\Lucene.Net.WordNet.SynExpand.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Services3.dll" />
+    <Content Include="bin\Debug\NetSpell.SpellChecker.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\NSubstitute.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\PayPalCoreSDK.dll" />
+    <Content Include="bin\Debug\PayPallTestProject.dll" />
+    <Content Include="bin\Debug\paypal_base.dll" />
+    <Content Include="bin\Debug\PDFClown.dll" />
+    <Content Include="bin\Debug\RestApiSDK.dll" />
+    <Content Include="bin\Debug\SchedulerService.exe" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Debug\System.Web.Http.dll" />
+    <Content Include="bin\Debug\System.Web.Http.xml" />
+    <Content Include="bin\Debug\Ude.dll" />
+    <Content Include="bin\Debug\Utilities.dll" />
+    <Content Include="Libraries\log4net.dll" />
+    <Content Include="Libraries\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="Libraries\Microsoft.Practices.Unity.dll" />
+    <Content Include="Libraries\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="Libraries\Newtonsoft.Json.dll" />
+    <Content Include="Libraries\PayPalCoreSDK.dll" />
+    <Content Include="Libraries\PayPallTestProject.dll" />
+    <Content Include="Libraries\paypal_base.dll" />
+    <Content Include="Libraries\RestApiSDK.dll" />
+    <Content Include="obj\Debug\Bluespire.Emerge.CommonService.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Bluespire.Emerge.CommonService.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\CMS.DocumentEngine.Web.UI.dll.config" />
+    <None Include="obj\Debug\Bluespire.Emerge.CommonService.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

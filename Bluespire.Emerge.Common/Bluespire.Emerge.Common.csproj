@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{007000C5-02AA-4563-AE2A-29EE077EE1B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bluespire.Emerge.Common</RootNamespace>
+    <AssemblyName>Bluespire.Emerge.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Base">
+      <HintPath>..\CMS\bin\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core">
+      <HintPath>..\CMS\bin\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\CMS\bin\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\CMS\bin\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog">
+      <HintPath>..\CMS\bin\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\CMS\bin\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO">
+      <HintPath>..\CMS\bin\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MacroEngine">
+      <HintPath>..\CMS\bin\CMS.MacroEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary">
+      <HintPath>..\CMS\bin\CMS.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership">
+      <HintPath>..\CMS\bin\CMS.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine">
+      <HintPath>..\CMS\bin\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider">
+      <HintPath>..\CMS\bin\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics">
+      <HintPath>..\CMS\bin\CMS.WebAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMS\CMSHelper\EmergeCMSContext.cs" />
+    <Compile Include="CMS\CMSHelper\EmergeCurrentUser.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeRegexHelper.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeRequestHelper.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeURLHelper.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeValidationHelper.cs" />
+    <Compile Include="CMS\MediaLibrary\EmergeMediaFileInfoProvider.cs" />
+    <Compile Include="CMS\SettingsProvider\EmergeCMSLoaderAttribute.cs" />
+    <Compile Include="CMS\SettingsProvider\EmergeDataClassInfo.cs" />
+    <Compile Include="CMS\SettingsProvider\EmergeDataClassInfoProvider.cs" />
+    <Compile Include="CMS\SettingsProvider\EmergeQueryDataParameters.cs" />
+    <Compile Include="CMS\SettingsProvider\EmergeSqlHelperClass.cs" />
+    <Compile Include="CMS\SiteProvider\EmergeCustomTableItem.cs" />
+    <Compile Include="CMS\SiteProvider\EmergeCustomTableItemProvider.cs" />
+    <Compile Include="CMS\SiteProvider\EmergeUserInfo.cs" />
+    <Compile Include="CMS\SiteProvider\EmergeUserInfoProvider.cs" />
+    <Compile Include="CMS\WebAnalytics\EmergeGeoIPHelper.cs" />
+    <Compile Include="CMS\WebAnalytics\EmergeGeoLocation.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CustomTableFieldAttribute.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="EmergeEncryptionHelper.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeDataHelper.cs" />
+    <Compile Include="CMS\EmergeSiteInfoProvider.cs" />
+    <Compile Include="Exceptions\AfterEditActionRedirectToUrlNotFoundException.cs" />
+    <Compile Include="Exceptions\ActionNotFeasibleException.cs" />
+    <Compile Include="Exceptions\CheerCardItemNotFoundException.cs" />
+    <Compile Include="Exceptions\ConfigurationItemMissingException.cs" />
+    <Compile Include="Exceptions\NearestLocationNotFoundException.cs" />
+    <Compile Include="Exceptions\GeocodingServiceException.cs" />
+    <Compile Include="Exceptions\DiscountCodeUsedException.cs" />
+    <Compile Include="Exceptions\EventCartDiscountCodeUsedException.cs" />
+    <Compile Include="Exceptions\EventCartDuplicationRegistrationsException.cs" />
+    <Compile Include="Exceptions\EventRegistrationLimitReachedException.cs" />
+    <Compile Include="Exceptions\GiftShopStockNotReducedException.cs" />
+    <Compile Include="Exceptions\GiftShopOrderNotSavedException.cs" />
+    <Compile Include="Exceptions\ProductNotFoundException.cs" />
+    <Compile Include="Exceptions\InvalidDiscountCodeException.cs" />
+    <Compile Include="Exceptions\RegistrationExistException.cs" />
+    <Compile Include="Exceptions\UserNotVolunteerException.cs" />
+    <Compile Include="Exceptions\UserWithEmailExistsException.cs" />
+    <Compile Include="Exceptions\UserWithUserNameExistsException.cs" />
+    <Compile Include="Exceptions\ZeroPurchasedQuantityException.cs" />
+    <Compile Include="Exceptions\ProductOutOfStockException.cs" />
+    <Compile Include="Exceptions\ExpectedColumnNotFoundException.cs" />
+    <Compile Include="Exceptions\PropertyDoesNotExistsException.cs" />
+    <Compile Include="Exceptions\NoItemSelectedException.cs" />
+    <Compile Include="Exceptions\TemplateFieldNotImplementedException.cs" />
+    <Compile Include="Exceptions\RatesSheetNotFoundException.cs" />
+    <Compile Include="Exceptions\RatesIncorrectMappingsException.cs" />
+    <Compile Include="Exceptions\CustomTableItemDeleteException.cs" />
+    <Compile Include="Exceptions\ModuleLevelPermissionsMissingException.cs" />
+    <Compile Include="Exceptions\CustomTableItemsByCriteriaNotFoundException.cs" />
+    <Compile Include="Exceptions\CustomTableItemNotFoundException.cs" />
+    <Compile Include="Exceptions\CustomTableNotExistsException.cs" />
+    <Compile Include="Exceptions\EmergeUnityException.cs" />
+    <Compile Include="Exceptions\CheerCardPreviewImageConfigItemsNotFound.cs" />
+    <Compile Include="Exceptions\CheerCardPreviewHtmlItemNotFound.cs" />
+    <Compile Include="Exceptions\CheerCardPreviewSaveExternalException.cs" />
+    <Compile Include="Exceptions\CheerCardConfigurationItemNotFound.cs" />
+    <Compile Include="Exceptions\CheerCardEmailToFormFieldMissingException.cs" />
+    <Compile Include="Exceptions\InvalidCustomTableNameException.cs" />
+    <Compile Include="Exceptions\CustomTableStatusColumnNotExistsException.cs" />
+    <Compile Include="Exceptions\DataEncryptDecryptException.cs" />
+    <Compile Include="Exceptions\EditItemPageNotFoundException.cs" />
+    <Compile Include="Exceptions\EmailSendException.cs" />
+    <Compile Include="Exceptions\CustomTableIdNotFoundException.cs" />
+    <Compile Include="Exceptions\GridActionNotDefinedExcetpion.cs" />
+    <Compile Include="Exceptions\InvalidDateRangeException.cs" />
+    <Compile Include="Exceptions\ModuleCodeNameNotFoundException.cs" />
+    <Compile Include="Exceptions\ModuleInMaintenanceModeException.cs" />
+    <Compile Include="Exceptions\ModuleNotPurchasedException.cs" />
+    <Compile Include="Exceptions\NewItemPageNotFoundException.cs" />
+    <Compile Include="Exceptions\PaymentGatewayException.cs" />
+    <Compile Include="Exceptions\PermissionsConfigFileNotFoundException.cs" />
+    <Compile Include="Exceptions\PermissionsMissingInPermissionConfigException.cs" />
+    <Compile Include="Exceptions\SessionDataMissingException.cs" />
+    <Compile Include="Exceptions\SystemInMaintenanceModeException.cs" />
+    <Compile Include="Exceptions\ViewItemPageNotFoundException.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeQueryHelper.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeResHelper.cs" />
+    <Compile Include="CMS\GlobalHelper\EmergeSessionHelper.cs" />
+    <Compile Include="Logging\EmergeLogWriter.cs" />
+    <Compile Include="CMS\MediaLibrary\EmergeMediaLibraryHelper.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relations\CustomTableRelationMaster.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AjaxMin.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.pdb" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\CMS.Base.dll" />
+    <Content Include="bin\Debug\CMS.Base.xml" />
+    <Content Include="bin\Debug\CMS.Core.dll" />
+    <Content Include="bin\Debug\CMS.Core.xml" />
+    <Content Include="bin\Debug\CMS.CustomTables.dll" />
+    <Content Include="bin\Debug\CMS.CustomTables.xml" />
+    <Content Include="bin\Debug\CMS.DataEngine.dll" />
+    <Content Include="bin\Debug\CMS.DataEngine.xml" />
+    <Content Include="bin\Debug\CMS.EventLog.dll" />
+    <Content Include="bin\Debug\CMS.EventLog.xml" />
+    <Content Include="bin\Debug\CMS.Helpers.dll" />
+    <Content Include="bin\Debug\CMS.Helpers.xml" />
+    <Content Include="bin\Debug\CMS.IO.dll" />
+    <Content Include="bin\Debug\CMS.IO.xml" />
+    <Content Include="bin\Debug\CMS.MacroEngine.dll" />
+    <Content Include="bin\Debug\CMS.MacroEngine.xml" />
+    <Content Include="bin\Debug\CMS.MediaLibrary.dll" />
+    <Content Include="bin\Debug\CMS.MediaLibrary.xml" />
+    <Content Include="bin\Debug\CMS.Membership.dll" />
+    <Content Include="bin\Debug\CMS.Membership.xml" />
+    <Content Include="bin\Debug\CMS.PortalEngine.dll" />
+    <Content Include="bin\Debug\CMS.PortalEngine.xml" />
+    <Content Include="bin\Debug\CMS.SiteProvider.dll" />
+    <Content Include="bin\Debug\CMS.SiteProvider.xml" />
+    <Content Include="bin\Debug\CMS.WebAnalytics.dll" />
+    <Content Include="bin\Debug\CMS.WebAnalytics.xml" />
+    <Content Include="bin\Debug\ContinuousIntegration.exe" />
+    <Content Include="bin\Debug\DotNetOpenAuth.dll" />
+    <Content Include="bin\Debug\Facebook.dll" />
+    <Content Include="bin\Debug\GlobalLink.ProjectDirector.WebServices.dll" />
+    <Content Include="bin\Debug\HealthMonitoringService.exe" />
+    <Content Include="bin\Debug\Interop.IWshRuntimeLibrary.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.xml" />
+    <Content Include="bin\Debug\Kentico.Google.Apis.dll" />
+    <Content Include="bin\Debug\LinkedIn.dll" />
+    <Content Include="bin\Debug\LinqToTwitter.dll" />
+    <Content Include="bin\Debug\Lucene.Net.v3.dll" />
+    <Content Include="bin\Debug\Lucene.Net.WordNet.SynExpand.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Services3.dll" />
+    <Content Include="bin\Debug\NetSpell.SpellChecker.dll" />
+    <Content Include="bin\Debug\NSubstitute.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\PDFClown.dll" />
+    <Content Include="bin\Debug\SchedulerService.exe" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Debug\System.Web.Http.dll" />
+    <Content Include="bin\Debug\System.Web.Http.xml" />
+    <Content Include="bin\Debug\Ude.dll" />
+    <Content Include="bin\Debug\Utilities.dll" />
+    <Content Include="bin\Release\Bluespire.Emerge.Common.dll" />
+    <Content Include="bin\Release\Bluespire.Emerge.Common.pdb" />
+    <Content Include="bin\Release\CMS.Base.dll" />
+    <Content Include="bin\Release\CMS.Core.dll" />
+    <Content Include="bin\Release\CMS.CustomTables.dll" />
+    <Content Include="bin\Release\CMS.DataEngine.dll" />
+    <Content Include="bin\Release\CMS.EventLog.dll" />
+    <Content Include="bin\Release\CMS.Helpers.dll" />
+    <Content Include="bin\Release\CMS.IO.dll" />
+    <Content Include="bin\Release\CMS.MacroEngine.dll" />
+    <Content Include="bin\Release\CMS.MediaLibrary.dll" />
+    <Content Include="bin\Release\CMS.Membership.dll" />
+    <Content Include="bin\Release\CMS.PortalEngine.dll" />
+    <Content Include="bin\Release\CMS.SiteProvider.dll" />
+    <Content Include="bin\Release\CMS.WebAnalytics.dll" />
+    <Content Include="bin\Release\Utilities.dll" />
+    <Content Include="Libraries\AutoMapper.dll" />
+    <Content Include="Libraries\obout_Calendar2_Net.dll" />
+    <Content Include="Libraries\Utilities.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

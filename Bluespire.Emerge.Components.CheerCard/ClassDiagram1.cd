@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bluespire.Emerge.Components.CheerCard.CheerCardConstants">
+    <Position X="1.5" Y="9" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ggIBDgqgBoEiAAACCSRABUQE8BhwCA0BMIUJGAlAhEA=</HashCode>
+      <FileName>CheerCardConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.Services.CheerCardConfigurationInfo">
+    <Position X="1.5" Y="7.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ARgSAAAQgAARIAAIABAAECEAIAgABCCAAoASBEAAQAA=</HashCode>
+      <FileName>Services\CheerCardConfigurationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.Services.CheerCardConfigurationService">
+    <Position X="1.5" Y="11" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Services\CheerCardConfigurationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.WebParts.CheerCardConfirmationWebPart">
+    <Position X="4.25" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebParts\CheerCardConfirmationWebPart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.WebParts.CheerCardFormWebPart">
+    <Position X="7" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>aAQiIkEoEAAAAQBQgABgiBAIKAAAABAAAEQAAAAAFgA=</HashCode>
+      <FileName>WebParts\CheerCardFormWebPart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.WebParts.CheerCardListingWebPart">
+    <Position X="1.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAIAABAAQAAEAAAAAAAAAABAAA=</HashCode>
+      <FileName>WebParts\CheerCardListingWebPart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.WebParts.CheerCardWebPart">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>WebParts\CheerCardWebPart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bluespire.Emerge.Components.CheerCard.Services.CheerCardService" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="11" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAEAEQAAAAAAQAgQAgAAAgCAAACAAAEEQAQAABJA=</HashCode>
+      <FileName>Services\CheerCardService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
