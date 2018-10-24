@@ -3,3 +3,8 @@
 /Bluespire.Emerge.Components.Careers/obj
 /Bluespire.Emerge.Components.CheerCard/obj
 /Bluespire.Emerge.Components.Donation/obj
+bin
+/Bluespire.Emerge.Components.Careers/bin
+/Bluespire.Emerge.Components.CheerCard/bin
+/Bluespire.Emerge.Components.CheerCard/.vs
+/Bluespire.Emerge.Components.Donation/bin
