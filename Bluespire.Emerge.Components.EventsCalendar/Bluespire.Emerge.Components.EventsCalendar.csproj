@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{645A8540-5FA1-4701-8F60-450E4BA0E537}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bluespire.Emerge.Components.EventsCalendar</RootNamespace>
+    <AssemblyName>Bluespire.Emerge.Components.EventsCalendar</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Bluespire.Emerge.Common\Libraries\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base">
+      <HintPath>..\CMS\bin\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.Base.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core">
+      <HintPath>..\CMS\bin\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\CMS\bin\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\CMS\bin\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.DocumentEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Globalization">
+      <HintPath>..\CMS\bin\CMS.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\CMS\bin\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MacroEngine">
+      <HintPath>..\CMS\bin\CMS.MacroEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership">
+      <HintPath>..\CMS\bin\CMS.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine">
+      <HintPath>..\CMS\bin\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.PortalEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider">
+      <HintPath>..\CMS\bin\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.UIControls">
+      <HintPath>..\CMS\bin\CMS.UIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\EventsConstants.cs" />
+    <Compile Include="CustomMacros\CustomMacroMethods.cs" />
+    <Compile Include="CustomMacros\EventsCalendarMacroMethodLoader.cs" />
+    <Compile Include="Entities\BlackOutDate.cs" />
+    <Compile Include="Entities\DiscountDetails.cs" />
+    <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\EventOccurence.cs" />
+    <Compile Include="Entities\EventRegistration.cs" />
+    <Compile Include="Entities\EventSchedule.cs" />
+    <Compile Include="Entities\EventSession.cs" />
+    <Compile Include="EventOccurenceComparer.cs" />
+    <Compile Include="GridActions\GridActivateVolunteerUserAction.cs" />
+    <Compile Include="GridActions\GridDeactivateVolunteerUserAction.cs" />
+    <Compile Include="GridActions\GridEventDeleteAction.cs" />
+    <Compile Include="GridActions\GridOccurenceDeleteAction.cs" />
+    <Compile Include="GridActions\GridRegistrationDeleteAction.cs" />
+    <Compile Include="GridActions\GridScheduleDeleteAction.cs" />
+    <Compile Include="GridActions\GridVolunteerUserDeleteAction.cs" />
+    <Compile Include="GridActions\IGridActivateVolunteerUserAction.cs" />
+    <Compile Include="GridActions\IGridDeactivateVolunteerUserAction.cs" />
+    <Compile Include="GridActions\IGridEventDeleteAction.cs" />
+    <Compile Include="GridActions\IGridOccurenceDeleteAction.cs" />
+    <Compile Include="GridActions\IGridRegistrationDeleteAction.cs" />
+    <Compile Include="GridActions\IGridScheduleDeleteAction.cs" />
+    <Compile Include="GridActions\IGridVolunteerUserDeleteAction.cs" />
+    <Compile Include="Pages\EventsCalendarDashboardPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventOccurenceDataListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventRegistrationDataListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsCalendarDataEditItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsCalendarDataListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsCalendarDataSelectFieldsPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsCalendarDataViewItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsCalendarListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsDataListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EventsRegistrationDataEditItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\EventsCalendarHelper.cs" />
+    <Compile Include="Services\BlackoutDateService.cs" />
+    <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\DiscountService.cs" />
+    <Compile Include="Services\EventOccurenceService.cs" />
+    <Compile Include="Services\EventRegistrationService.cs" />
+    <Compile Include="Services\EventScheduleService.cs" />
+    <Compile Include="Services\EventService.cs" />
+    <Compile Include="Services\Interfaces\IBlackoutDateService.cs" />
+    <Compile Include="Services\Interfaces\IDiscountService.cs" />
+    <Compile Include="Services\Interfaces\IEventOccurenceService.cs" />
+    <Compile Include="Services\Interfaces\IEventRegistrationService.cs" />
+    <Compile Include="Services\Interfaces\IEventScheduleService.cs" />
+    <Compile Include="Services\Interfaces\IEventService.cs" />
+    <Compile Include="Services\Interfaces\ISessionService.cs" />
+    <Compile Include="Services\MonthlyScheduleBuilder.cs" />
+    <Compile Include="Services\ScheduleBuilder.cs" />
+    <Compile Include="Services\ScheduleBuilderFactory.cs" />
+    <Compile Include="Services\SessionService.cs" />
+    <Compile Include="Services\SingleScheduleBuilder.cs" />
+    <Compile Include="Services\WeeklyScheduleBuilder.cs" />
+    <Compile Include="TemporalExpressions\CollectionTE.cs" />
+    <Compile Include="TemporalExpressions\DateTE.cs" />
+    <Compile Include="TemporalExpressions\DayInMonthTE.cs" />
+    <Compile Include="TemporalExpressions\DayOfMonthTE.cs" />
+    <Compile Include="TemporalExpressions\DayOfWeekTE.cs" />
+    <Compile Include="TemporalExpressions\DifferenceTE.cs" />
+    <Compile Include="TemporalExpressions\IntersectionTE.cs" />
+    <Compile Include="TemporalExpressions\MonthTE.cs" />
+    <Compile Include="TemporalExpressions\TEHelpers.cs" />
+    <Compile Include="TemporalExpressions\TemporalExpression.cs" />
+    <Compile Include="TemporalExpressions\UnionTE.cs" />
+    <Compile Include="WebParts\AddEventToCalendarWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\CalendarWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ChooseTimeSlotViewWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EventCartRegistrationConfirmationWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EventCartRegistrationWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EventCartWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EventDetailsViewWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EventRegistrationWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\EventsCalendarWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\RegistrationConfirmationWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\UpcomingEventsBoxWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\VolunteerEventDetailsViewWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\VolunteerEventRegistrationConfirmationWebpart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bluespire.Emerge.CommonService\Bluespire.Emerge.CommonService.csproj">
+      <Project>{bc7e72f9-c9e5-452e-83c5-681876e0d3e9}</Project>
+      <Name>Bluespire.Emerge.CommonService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Common\Bluespire.Emerge.Common.csproj">
+      <Project>{007000c5-02aa-4563-ae2a-29ee077ee1b8}</Project>
+      <Name>Bluespire.Emerge.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Web\Bluespire.Emerge.Web.csproj">
+      <Project>{366a1e03-30b5-442e-841a-1e2cf2050b95}</Project>
+      <Name>Bluespire.Emerge.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AjaxMin.dll" />
+    <Content Include="bin\Debug\AutoMapper.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.CommonService.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.CommonService.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Components.EventsCalendar.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Components.EventsCalendar.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.LicenseManager.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.LicenseManager.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Web.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Web.pdb" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\CMS.Base.dll" />
+    <Content Include="bin\Debug\CMS.Base.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.Base.Web.UI.XML" />
+    <Content Include="bin\Debug\CMS.Base.xml" />
+    <Content Include="bin\Debug\CMS.Core.dll" />
+    <Content Include="bin\Debug\CMS.Core.xml" />
+    <Content Include="bin\Debug\CMS.CustomTables.dll" />
+    <Content Include="bin\Debug\CMS.CustomTables.xml" />
+    <Content Include="bin\Debug\CMS.DataEngine.dll" />
+    <Content Include="bin\Debug\CMS.DataEngine.xml" />
+    <Content Include="bin\Debug\CMS.DocumentEngine.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.Globalization.dll" />
+    <Content Include="bin\Debug\CMS.Globalization.xml" />
+    <Content Include="bin\Debug\CMS.Helpers.dll" />
+    <Content Include="bin\Debug\CMS.Helpers.xml" />
+    <Content Include="bin\Debug\CMS.MacroEngine.dll" />
+    <Content Include="bin\Debug\CMS.MacroEngine.xml" />
+    <Content Include="bin\Debug\CMS.Membership.dll" />
+    <Content Include="bin\Debug\CMS.Membership.xml" />
+    <Content Include="bin\Debug\CMS.PortalEngine.dll" />
+    <Content Include="bin\Debug\CMS.PortalEngine.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.PortalEngine.Web.UI.xml" />
+    <Content Include="bin\Debug\CMS.PortalEngine.xml" />
+    <Content Include="bin\Debug\CMS.SiteProvider.dll" />
+    <Content Include="bin\Debug\CMS.SiteProvider.xml" />
+    <Content Include="bin\Debug\CMS.UIControls.dll" />
+    <Content Include="bin\Debug\CMS.UIControls.xml" />
+    <Content Include="bin\Debug\ContinuousIntegration.exe" />
+    <Content Include="bin\Debug\DotNetOpenAuth.dll" />
+    <Content Include="bin\Debug\Facebook.dll" />
+    <Content Include="bin\Debug\GlobalLink.ProjectDirector.WebServices.dll" />
+    <Content Include="bin\Debug\HealthMonitoringService.exe" />
+    <Content Include="bin\Debug\Interop.IWshRuntimeLibrary.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.xml" />
+    <Content Include="bin\Debug\Kentico.Google.Apis.dll" />
+    <Content Include="bin\Debug\LinkedIn.dll" />
+    <Content Include="bin\Debug\LinqToTwitter.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\Lucene.Net.v3.dll" />
+    <Content Include="bin\Debug\Lucene.Net.WordNet.SynExpand.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Services3.dll" />
+    <Content Include="bin\Debug\NetSpell.SpellChecker.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\NSubstitute.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\PayPalCoreSDK.dll" />
+    <Content Include="bin\Debug\PDFClown.dll" />
+    <Content Include="bin\Debug\RestApiSDK.dll" />
+    <Content Include="bin\Debug\SchedulerService.exe" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Debug\System.Web.Http.dll" />
+    <Content Include="bin\Debug\System.Web.Http.xml" />
+    <Content Include="bin\Debug\Ude.dll" />
+    <Content Include="bin\Debug\Utilities.dll" />
+    <Content Include="bin\Release\Bluespire.Emerge.Components.EventsCalendar.dll" />
+    <Content Include="bin\Release\Bluespire.Emerge.Components.EventsCalendar.pdb" />
+    <Content Include="Configurations\EventsCalendarUnity.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\CMS.DocumentEngine.Web.UI.dll.config" />
+    <None Include="bin\Debug\Configurations\EventsCalendarUnity.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

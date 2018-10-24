@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45E4AFB7-3A6B-4C57-A530-FB2BD79C5B34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bluespire.Emerge.Components.GiftShop</RootNamespace>
+    <AssemblyName>Bluespire.Emerge.Components.GiftShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Base">
+      <HintPath>..\CMS\bin\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.Base.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\CMS\bin\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\CMS\bin\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.DocumentEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Globalization">
+      <HintPath>..\CMS\bin\CMS.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\CMS\bin\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine">
+      <HintPath>..\CMS\bin\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine.Web.UI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CMS\bin\CMS.PortalEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.UIControls">
+      <HintPath>..\CMS\bin\CMS.UIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Cart.cs" />
+    <Compile Include="BL\Category.cs" />
+    <Compile Include="BL\OrderManager.cs" />
+    <Compile Include="DL\CategoryDAL.cs" />
+    <Compile Include="BL\CategoryManager.cs" />
+    <Compile Include="GiftShopConstants.cs" />
+    <Compile Include="BL\Order.cs" />
+    <Compile Include="DL\OrderDAL.cs" />
+    <Compile Include="Helpers\GiftShopHelpers.cs" />
+    <Compile Include="Pages\GiftShopDashboardPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GiftShopDataEditItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GiftShopDataListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GiftShopDataSelectFieldsPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GiftShopDataViewItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GiftShopListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BL\Product.cs" />
+    <Compile Include="DL\ProductDAL.cs" />
+    <Compile Include="BL\ProductManager.cs" />
+    <Compile Include="Pages\GiftShopOrderDataListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BL\TaxCalculator.cs" />
+    <Compile Include="DL\TaxCalculatorDAL.cs" />
+    <Compile Include="WebParts\CartWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ConfirmationMessageWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\GiftShopWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ProductDetailsWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ProductListingWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\PurchaseInformationFormWebPart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bluespire.Emerge.CommonService\Bluespire.Emerge.CommonService.csproj">
+      <Project>{bc7e72f9-c9e5-452e-83c5-681876e0d3e9}</Project>
+      <Name>Bluespire.Emerge.CommonService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Common\Bluespire.Emerge.Common.csproj">
+      <Project>{007000c5-02aa-4563-ae2a-29ee077ee1b8}</Project>
+      <Name>Bluespire.Emerge.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bluespire.Emerge.Web\Bluespire.Emerge.Web.csproj">
+      <Project>{366a1e03-30b5-442e-841a-1e2cf2050b95}</Project>
+      <Name>Bluespire.Emerge.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AjaxMin.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Common.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.CommonService.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.CommonService.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Components.GiftShop.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Components.GiftShop.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.LicenseManager.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.LicenseManager.pdb" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Web.dll" />
+    <Content Include="bin\Debug\Bluespire.Emerge.Web.pdb" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\CMS.Base.dll" />
+    <Content Include="bin\Debug\CMS.Base.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.Base.Web.UI.XML" />
+    <Content Include="bin\Debug\CMS.Base.xml" />
+    <Content Include="bin\Debug\CMS.CustomTables.dll" />
+    <Content Include="bin\Debug\CMS.CustomTables.xml" />
+    <Content Include="bin\Debug\CMS.DataEngine.dll" />
+    <Content Include="bin\Debug\CMS.DataEngine.xml" />
+    <Content Include="bin\Debug\CMS.DocumentEngine.xml" />
+    <Content Include="bin\Debug\CMS.Globalization.dll" />
+    <Content Include="bin\Debug\CMS.Globalization.xml" />
+    <Content Include="bin\Debug\CMS.Helpers.dll" />
+    <Content Include="bin\Debug\CMS.Helpers.xml" />
+    <Content Include="bin\Debug\CMS.PortalEngine.dll" />
+    <Content Include="bin\Debug\CMS.PortalEngine.Web.UI.dll" />
+    <Content Include="bin\Debug\CMS.PortalEngine.Web.UI.xml" />
+    <Content Include="bin\Debug\CMS.PortalEngine.xml" />
+    <Content Include="bin\Debug\CMS.UIControls.dll" />
+    <Content Include="bin\Debug\CMS.UIControls.xml" />
+    <Content Include="bin\Debug\ContinuousIntegration.exe" />
+    <Content Include="bin\Debug\DotNetOpenAuth.dll" />
+    <Content Include="bin\Debug\Facebook.dll" />
+    <Content Include="bin\Debug\GlobalLink.ProjectDirector.WebServices.dll" />
+    <Content Include="bin\Debug\HealthMonitoringService.exe" />
+    <Content Include="bin\Debug\Interop.IWshRuntimeLibrary.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.dll" />
+    <Content Include="bin\Debug\ITHit.WebDAV.Server.xml" />
+    <Content Include="bin\Debug\Kentico.Google.Apis.dll" />
+    <Content Include="bin\Debug\LinkedIn.dll" />
+    <Content Include="bin\Debug\LinqToTwitter.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\Lucene.Net.v3.dll" />
+    <Content Include="bin\Debug\Lucene.Net.WordNet.SynExpand.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Services3.dll" />
+    <Content Include="bin\Debug\NetSpell.SpellChecker.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\NSubstitute.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\PayPalCoreSDK.dll" />
+    <Content Include="bin\Debug\PDFClown.dll" />
+    <Content Include="bin\Debug\RestApiSDK.dll" />
+    <Content Include="bin\Debug\SchedulerService.exe" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Debug\System.Web.Http.dll" />
+    <Content Include="bin\Debug\System.Web.Http.xml" />
+    <Content Include="bin\Debug\Ude.dll" />
+    <Content Include="bin\Debug\Utilities.dll" />
+    <Content Include="bin\Release\Bluespire.Emerge.Components.GiftShop.dll" />
+    <Content Include="bin\Release\Bluespire.Emerge.Components.GiftShop.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
