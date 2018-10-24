@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DatabaseSettings>
+  <ScriptsPath>App_Data\\Install\\[SQL.zip]</ScriptsPath>
+  <HotfixScriptPath>App_Data\\Install\\[EmergeHotfix.zip]</HotfixScriptPath>
+  <WebsiteName>EmergeWebsite</WebsiteName>
+  <HotfixFiles>defaultDBObjects.txt|defaultData.txt</HotfixFiles>
+</DatabaseSettings>

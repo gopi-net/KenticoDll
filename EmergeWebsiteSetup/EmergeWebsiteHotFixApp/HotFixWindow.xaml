@@ -1,0 +1,88 @@
+﻿<Window x:Name="Emerge_Website_Setup" x:Class="EmergeWebsiteHotFixApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Emerge Hotfix" Height="544" Width="802" ResizeMode="CanMinimize" FontFamily="Arial" Icon="bluespire_icon.ico">
+    <Grid Margin="0,0,4,1">
+        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFEDEEF2" Offset="0.339"/>
+                <GradientStop Color="#FF4D5659" Offset="1"/>
+                <GradientStop Color="#FF586366" Offset="1"/>
+                <GradientStop Color="#FFACE3F1" Offset="1"/>
+                <GradientStop Color="#FFB9D0D7" Offset="1"/>
+                <GradientStop Color="#D83D9ACF" Offset="0.992"/>
+                <GradientStop Color="#E3B5D4E4" Offset="0.997"/>
+                <GradientStop Color="#D9BFD9E8" Offset="0.703"/>
+                <GradientStop Color="#EDD2E6F0" Offset="0.607"/>
+                <GradientStop Color="#D8BAD9EA" Offset="0.835"/>
+                <GradientStop Color="#D861ACD6" Offset="0.984"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" Width="195" RenderTransformOrigin="-0.053,1.864" Height="40" FontSize="16" FontFamily="Arial" Click="StartButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="1"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FF207AB9" Offset="1"/>
+                    <GradientStop Color="#FF718BA5" Offset="0.969"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="67" Stroke="Black" VerticalAlignment="Top" Width="791">
+            <Rectangle.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF2BA86A" Offset="0.935"/>
+                    <GradientStop Color="#FF2BA86A"/>
+                    <GradientStop Color="#FF9ACFB4" Offset="0.098"/>
+                </LinearGradientBrush>
+            </Rectangle.OpacityMask>
+            <Rectangle.Fill>
+                
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#6600FF8B"/>
+                    <GradientStop Color="#D92D99D6"/>
+                    <GradientStop Color="#EF123D56"/>
+                    <GradientStop Color="#E02377A7"/>
+                    <GradientStop Color="#DD28A3BE"/>
+                    <GradientStop Color="#DA2B93CD"/>
+                    <GradientStop Color="#D9ACB862"/>
+                    <GradientStop Color="#D9A0CFEA"/>
+                    <GradientStop Color="#D9D1E3EE"/>
+                    <GradientStop Color="#D95AAEDD"/>
+                    <GradientStop Color="#D9B4D7EB"/>
+                    <GradientStop Color="#D9D1E3EE"/>
+                    <GradientStop Color="#D9D1E3EE"/>
+                    <GradientStop Color="#FFD9F8AA" Offset="0.997"/>
+                </LinearGradientBrush>
+                
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="bluespire.png" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="183" RenderTransformOrigin="0.394,0.345"/>
+        <TextBox x:Name="ProgressText" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Height="236" Margin="10,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" FontSize="14" SpellCheck.IsEnabled="True"/>
+        <Label Content="Emerge Hotfix" HorizontalAlignment="Center" Margin="330,15,303,0" VerticalAlignment="Top" Width="159" RenderTransformOrigin="0.496,0.457" Height="35" FontSize="22" FontWeight="Bold" Foreground="#FF194D61"/>
+        <Label Content="Progress Information..." HorizontalAlignment="Left" Margin="6,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.385,0.625" Height="28" Width="132" FontSize="11"/>
+        <Grid x:Name="WebsiteDetailsPanel" HorizontalAlignment="Left" Height="114" Margin="10,72,0,0" VerticalAlignment="Top" Width="781">
+            <Label Content="Website Path" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="WebsitePathTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="362" Margin="111,31,0,0" ToolTip="Select  the browse button to select the root path of the website application code."/>
+            <Button x:Name="WebsitePathButton" Content="Browse..." HorizontalAlignment="Left" Margin="488,31,0,0" VerticalAlignment="Top" Width="103" Height="36" Click="WebsitePathButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.102"/>
+                        <GradientStop Color="#FFDDDDDD"/>
+                        <GradientStop Color="#FF1A4774" Offset="1"/>
+                        <GradientStop Color="#FF7B93AB" Offset="0.858"/>
+                        <GradientStop Color="#FF365C83" Offset="0.98"/>
+                        <GradientStop Color="#FF587797" Offset="0.949"/>
+                        <GradientStop Color="#FF718BA5" Offset="0.906"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Window>

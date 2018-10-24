@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAF11137-D18F-4961-8CC3-658B27EFC876}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebsiteSetupApp</RootNamespace>
+    <AssemblyName>WebsiteSetupApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMS.AmazonStorage, Version=7.0.4954.41826, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.AmazonStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AzureStorage, Version=7.0.4954.41826, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.AzureStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Blogs, Version=7.0.4954.41849, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Blogs.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Chat, Version=7.0.4954.41854, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CKEditor, Version=7.0.4954.41836, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.CKEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CMSHelper, Version=7.0.4954.41830, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.CMSHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CMSSiteMapProvider, Version=7.0.4954.41832, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.CMSSiteMapProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CMSStorage, Version=7.0.4954.41820, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.CMSStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Community, Version=7.0.4954.41846, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Controls, Version=7.0.4954.41839, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Controls.XmlSerializers, Version=7.0.4954.41839, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Controls.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DatabaseHelper, Version=7.0.4954.41824, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.DatabaseHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataCom, Version=7.0.4954.41851, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.DataCom.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine, Version=7.0.4954.41820, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataProviderSQL, Version=7.0.4954.41821, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.DataProviderSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine, Version=7.0.4954.41828, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.DocumentEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Ecommerce, Version=7.0.4954.41848, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Ecommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EcommerceProvider, Version=7.0.4954.41853, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.EcommerceProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EmailEngine, Version=7.0.4954.41824, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.EmailEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog, Version=7.0.4954.41821, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventManager, Version=7.0.4954.41830, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.EventManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ExtendedControls, Version=7.0.4954.41834, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.ExtendedControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormControls, Version=7.0.4954.41843, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.FormControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine, Version=7.0.4954.41826, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.FormEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Forums, Version=7.0.4954.41846, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Forums.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.GlobalEventHelper, Version=7.0.4954.41821, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.GlobalEventHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.GlobalHelper, Version=7.0.4954.41819, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.GlobalHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ImportExport, Version=7.0.4954.41833, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.ImportExport.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO, Version=7.0.4954.41818, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ISearchEngine, Version=7.0.4954.41818, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.ISearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider, Version=7.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.LicenseProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider.XmlSerializers, Version=7.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.LicenseProvider.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary, Version=7.0.4954.41847, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MembershipProvider, Version=7.0.4954.41832, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.MembershipProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MessageBoard, Version=7.0.4954.41849, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.MessageBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Messaging, Version=7.0.4954.41832, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MetaWeblogProvider, Version=7.0.4954.41850, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.MetaWeblogProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Newsletter, Version=7.0.4954.41831, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Newsletter.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Notifications, Version=7.0.4954.41850, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineMarketing, Version=7.0.4954.41847, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.OnlineMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OutputFilter, Version=7.0.4954.41830, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.OutputFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Polls, Version=7.0.4954.41826, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Polls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalControls, Version=7.0.4954.41842, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.PortalControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine, Version=7.0.4954.41828, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ProjectManagement, Version=7.0.4954.41831, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.ProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Reporting, Version=7.0.4954.41837, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ResourceManager, Version=7.0.4954.41819, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SalesForce, Version=7.0.4954.41852, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SalesForce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Scheduler, Version=7.0.4954.41826, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SearchProviderSQL, Version=7.0.4954.41821, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SearchProviderSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SettingsProvider, Version=7.0.4954.41817, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SettingsProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SharePoint, Version=7.0.4954.41831, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider, Version=7.0.4954.41825, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.skmMenuControl, Version=7.0.4954.41837, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.skmMenuControl.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialNetworking, Version=7.0.4954.41848, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SocialNetworking.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization, Version=7.0.4954.41822, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.Synchronization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SynchronizationEngine, Version=7.0.4954.41832, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.SynchronizationEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.TranslationServices, Version=7.0.4954.41831, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.UIControls, Version=7.0.4954.41845, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.UIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.URLRewritingEngine, Version=7.0.4954.41836, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.URLRewritingEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.VirtualPathHelper, Version=7.0.4954.41820, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.VirtualPathHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.VirtualPathProvider, Version=7.0.4954.41837, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.VirtualPathProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics, Version=7.0.4954.41827, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WebAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebDAV, Version=7.0.4954.41855, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WebDAV.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebFarmSync, Version=7.0.4954.41822, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WebFarmSync.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebFarmSyncHelper, Version=7.0.4954.41835, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WebFarmSyncHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebServices, Version=7.0.4954.41835, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WinServiceEngine, Version=7.0.4954.41918, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WinServiceEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WorkflowEngine, Version=7.0.4954.41827, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CMS.WorkflowEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.1.0.3, Culture=neutral, PublicKeyToken=d846ee227f01c7a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WebInstallerHelper, Version=7.0.4954.41818, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\WebInstallerHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Resources\Messages.Designer.cs">
+      <DependentUpon>Messages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bluespire.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\CMS.AmazonStorage.dll" />
+    <Content Include="Lib\CMS.AzureStorage.dll" />
+    <Content Include="Lib\CMS.Blogs.dll" />
+    <Content Include="Lib\CMS.Chat.dll" />
+    <Content Include="Lib\CMS.CKEditor.dll" />
+    <Content Include="Lib\CMS.CMSHelper.dll" />
+    <Content Include="Lib\CMS.CMSSiteMapProvider.dll" />
+    <Content Include="Lib\CMS.CMSStorage.dll" />
+    <Content Include="Lib\CMS.Community.dll" />
+    <Content Include="Lib\CMS.Controls.dll" />
+    <Content Include="Lib\CMS.Controls.XmlSerializers.dll" />
+    <Content Include="Lib\CMS.DatabaseHelper.dll" />
+    <Content Include="Lib\CMS.DataCom.dll" />
+    <Content Include="Lib\CMS.DataEngine.dll" />
+    <Content Include="Lib\CMS.DataProviderSQL.dll" />
+    <Content Include="Lib\CMS.DocumentEngine.dll" />
+    <Content Include="Lib\CMS.Ecommerce.dll" />
+    <Content Include="Lib\CMS.EcommerceProvider.dll" />
+    <Content Include="Lib\CMS.EmailEngine.dll" />
+    <Content Include="Lib\CMS.EventLog.dll" />
+    <Content Include="Lib\CMS.EventManager.dll" />
+    <Content Include="Lib\CMS.ExtendedControls.dll" />
+    <Content Include="Lib\CMS.FormControls.dll" />
+    <Content Include="Lib\CMS.FormEngine.dll" />
+    <Content Include="Lib\CMS.Forums.dll" />
+    <Content Include="Lib\CMS.GlobalEventHelper.dll" />
+    <Content Include="Lib\CMS.GlobalHelper.dll" />
+    <Content Include="Lib\CMS.ImportExport.dll" />
+    <Content Include="Lib\CMS.IO.dll" />
+    <Content Include="Lib\CMS.ISearchEngine.dll" />
+    <Content Include="Lib\CMS.LicenseProvider.dll" />
+    <Content Include="Lib\CMS.LicenseProvider.XmlSerializers.dll" />
+    <Content Include="Lib\CMS.MediaLibrary.dll" />
+    <Content Include="Lib\CMS.MembershipProvider.dll" />
+    <Content Include="Lib\CMS.MessageBoard.dll" />
+    <Content Include="Lib\CMS.Messaging.dll" />
+    <Content Include="Lib\CMS.MetaWeblogProvider.dll" />
+    <Content Include="Lib\CMS.Newsletter.dll" />
+    <Content Include="Lib\CMS.Notifications.dll" />
+    <Content Include="Lib\CMS.OnlineMarketing.dll" />
+    <Content Include="Lib\CMS.OutputFilter.dll" />
+    <Content Include="Lib\CMS.Polls.dll" />
+    <Content Include="Lib\CMS.PortalControls.dll" />
+    <Content Include="Lib\CMS.PortalEngine.dll" />
+    <Content Include="Lib\CMS.ProjectManagement.dll" />
+    <Content Include="Lib\CMS.Reporting.dll" />
+    <Content Include="Lib\CMS.ResourceManager.dll" />
+    <Content Include="Lib\CMS.SalesForce.dll" />
+    <Content Include="Lib\CMS.Scheduler.dll" />
+    <Content Include="Lib\CMS.SearchProviderSQL.dll" />
+    <Content Include="Lib\CMS.SettingsProvider.dll" />
+    <Content Include="Lib\CMS.SharePoint.dll" />
+    <Content Include="Lib\CMS.SiteProvider.dll" />
+    <Content Include="Lib\CMS.skmMenuControl.dll" />
+    <Content Include="Lib\CMS.SocialNetworking.dll" />
+    <Content Include="Lib\CMS.Synchronization.dll" />
+    <Content Include="Lib\CMS.SynchronizationEngine.dll" />
+    <Content Include="Lib\CMS.TranslationServices.dll" />
+    <Content Include="Lib\CMS.UIControls.dll" />
+    <Content Include="Lib\CMS.URLRewritingEngine.dll" />
+    <Content Include="Lib\CMS.VirtualPathHelper.dll" />
+    <Content Include="Lib\CMS.VirtualPathProvider.dll" />
+    <Content Include="Lib\CMS.WebAnalytics.dll" />
+    <Content Include="Lib\CMS.WebDAV.dll" />
+    <Content Include="Lib\CMS.WebFarmSync.dll" />
+    <Content Include="Lib\CMS.WebFarmSyncHelper.dll" />
+    <Content Include="Lib\CMS.WebServices.dll" />
+    <Content Include="Lib\CMS.WinServiceEngine.dll" />
+    <Content Include="Lib\CMS.WorkflowEngine.dll" />
+    <Content Include="Lib\Lucene.Net.dll" />
+    <Content Include="Lib\WebInstallerHelper.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emerge.WebsiteSetupManager\Emerge.WebsiteSetupManager.csproj">
+      <Project>{097ec3d0-dda9-4b21-92f5-a70f04f8d2f3}</Project>
+      <Name>Emerge.WebsiteSetupManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

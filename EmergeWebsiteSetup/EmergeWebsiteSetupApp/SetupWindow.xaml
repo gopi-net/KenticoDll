@@ -1,0 +1,117 @@
+﻿<Window x:Name="Emerge_Website_Setup" x:Class="EmergeWebsiteSetupApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Emerge Website Setup" Height="735" Width="1008" ResizeMode="CanMinimize" FontFamily="Arial" Icon="bluespire_icon.ico">
+    <Grid Margin="0,0,0,3">
+        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFEDEEF2" Offset="0.339"/>
+                <GradientStop Color="#FF4D5659" Offset="1"/>
+                <GradientStop Color="#FF586366" Offset="1"/>
+                <GradientStop Color="#FFACE3F1" Offset="1"/>
+                <GradientStop Color="#FFB9D0D7" Offset="1"/>
+                <GradientStop Color="#D83D9ACF" Offset="0.992"/>
+                <GradientStop Color="#E3B5D4E4" Offset="0.997"/>
+                <GradientStop Color="#D9BFD9E8" Offset="0.703"/>
+                <GradientStop Color="#EDD2E6F0" Offset="0.607"/>
+                <GradientStop Color="#D8BAD9EA" Offset="0.835"/>
+                <GradientStop Color="#D861ACD6" Offset="0.984"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Width="195" RenderTransformOrigin="-0.053,1.864" Height="40" FontSize="16" FontFamily="Arial" Click="StartButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="1"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FF207AB9" Offset="1"/>
+                    <GradientStop Color="#FF718BA5" Offset="0.969"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="67" Stroke="Black" VerticalAlignment="Top" Width="1002">
+            <Rectangle.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF2BA86A" Offset="0.935"/>
+                    <GradientStop Color="#FF2BA86A"/>
+                    <GradientStop Color="#FF9ACFB4" Offset="0.098"/>
+                </LinearGradientBrush>
+            </Rectangle.OpacityMask>
+            <Rectangle.Fill>
+                
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#6600FF8B"/>
+                    <GradientStop Color="#D92D99D6"/>
+                    <GradientStop Color="#EF123D56"/>
+                    <GradientStop Color="#E02377A7"/>
+                    <GradientStop Color="#DD28A3BE"/>
+                    <GradientStop Color="#DA2B93CD"/>
+                    <GradientStop Color="#D9ACB862"/>
+                    <GradientStop Color="#D9A0CFEA"/>
+                    <GradientStop Color="#D9D1E3EE"/>
+                    <GradientStop Color="#D95AAEDD"/>
+                    <GradientStop Color="#D9B4D7EB"/>
+                    <GradientStop Color="#D9D1E3EE"/>
+                    <GradientStop Color="#D9D1E3EE"/>
+                    <GradientStop Color="#FFD9F8AA" Offset="0.997"/>
+                </LinearGradientBrush>
+                
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="bluespire.png" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="183" RenderTransformOrigin="0.394,0.345"/>
+        <TextBox x:Name="ProgressText" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Height="236" Margin="10,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="975" FontSize="14" SpellCheck.IsEnabled="True" Grid.ColumnSpan="2"/>
+        <Label Content="Emerge Website Setup" HorizontalAlignment="Center" Margin="380,15,360,0" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.496,0.457" Height="35" FontSize="22" FontWeight="Bold" Foreground="#FF194D61"/>
+        <Label Content="Version: 2.0 (Kentico 8)" HorizontalAlignment="Left" Margin="880,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.538,-0.5" Width="105" FontSize="9" Height="24"/>
+        <Label Content="Progress Information..." HorizontalAlignment="Left" Margin="6,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.385,0.625" Height="28" Width="132" FontSize="11"/>
+        <Grid x:Name="WebsiteDetailsPanel" HorizontalAlignment="Left" Height="293" Margin="9,65,0,0" VerticalAlignment="Top" Width="496">
+            <Label Content="Site Display Name" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="SiteDisplayNameTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Margin="141,14,0,0" ToolTip="Enter the website display name" Background="White"/>
+            <Label Content="Site Code Name" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="SiteCodeNameTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Margin="141,64,0,0" ToolTip="Enter the website code name without spaces."/>
+            <Label Content="Site Domain" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.33,-0.375"/>
+            <TextBox x:Name="SiteDomainTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Margin="141,113,0,0" ToolTip="Enter the domain name. e.g. localhost"/>
+            <Label Content="Website Path" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="WebsitePathTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Margin="141,161,0,0" ToolTip="Select  the browse button to select the root path of the website application code."/>
+            <Button x:Name="WebsitePathButton" Content="Browse..." HorizontalAlignment="Left" Margin="411,161,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="WebsitePathButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.102"/>
+                        <GradientStop Color="#FFDDDDDD"/>
+                        <GradientStop Color="#FF1A4774" Offset="1"/>
+                        <GradientStop Color="#FF7B93AB" Offset="0.858"/>
+                        <GradientStop Color="#FF365C83" Offset="0.98"/>
+                        <GradientStop Color="#FF587797" Offset="0.949"/>
+                        <GradientStop Color="#FF718BA5" Offset="0.906"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Content="Import Package Path" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.534,0.462"/>
+            <TextBox x:Name="PackagePathTextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="265" Margin="141,231,0,0" RenderTransformOrigin="0.493,0.481" ToolTip="Select the browse button to select the zip package."/>
+            <Button x:Name="PackagePathButton" Content="Browse..." HorizontalAlignment="Left" Margin="411,231,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="PackagePathButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.075"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.154"/>
+                        <GradientStop Color="#FF718BA5" Offset="0.988"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid x:Name="DatabaseDetailsPanel" HorizontalAlignment="Left" Height="293" Margin="521,67,0,0" VerticalAlignment="Top" Width="471">
+            <Label Content="Database Server Name" HorizontalAlignment="Left" Margin="4,12,0,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="ServerNameTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Margin="142,13,0,0" ToolTip="Enter the database server name."/>
+            <Label Content="User Id" HorizontalAlignment="Left" Margin="4,63,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="UserNameTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Margin="142,64,0,0" ToolTip="Enter the user id of the database"/>
+            <Label Content="Password" HorizontalAlignment="Left" Margin="4,112,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.476,0.385"/>
+            <Label Content="Database Name" HorizontalAlignment="Left" Margin="4,168,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.476,0.385"/>
+            <TextBox x:Name="DatabaseNameTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" Margin="142,169,0,0" ToolTip="Enter the database name you would like to create."/>
+            <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="142,112,0,0" VerticalAlignment="Top" Width="323" Height="24" ToolTip="Enter the password for the database server"/>
+        </Grid>
+
+    </Grid>
+</Window>

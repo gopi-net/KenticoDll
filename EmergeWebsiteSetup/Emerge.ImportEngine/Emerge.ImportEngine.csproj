@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F478F7D2-C994-4DCB-BFB5-321A866B105C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emerge.ImportEngine</RootNamespace>
+    <AssemblyName>Emerge.ImportEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\Lib\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK">
+      <HintPath>..\Lib\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\Lib\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AmazonStorage">
+      <HintPath>..\Lib\CMS.AmazonStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ApplicationDashboard">
+      <HintPath>..\Lib\CMS.ApplicationDashboard.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Automation">
+      <HintPath>..\Lib\CMS.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AzureStorage">
+      <HintPath>..\Lib\CMS.AzureStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.BannerManagement">
+      <HintPath>..\Lib\CMS.BannerManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base">
+      <HintPath>..\Lib\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Blogs">
+      <HintPath>..\Lib\CMS.Blogs.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Chat">
+      <HintPath>..\Lib\CMS.Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CKEditor">
+      <HintPath>..\Lib\CMS.CKEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CMSSiteMapProvider">
+      <HintPath>..\Lib\CMS.CMSSiteMapProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Community">
+      <HintPath>..\Lib\CMS.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Controls">
+      <HintPath>..\Lib\CMS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core">
+      <HintPath>..\Lib\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\Lib\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataCom">
+      <HintPath>..\Lib\CMS.DataCom.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\Lib\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataProviderSQL">
+      <HintPath>..\Lib\CMS.DataProviderSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine">
+      <HintPath>..\Lib\CMS.DocumentEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentWebServices">
+      <HintPath>..\Lib\CMS.DocumentWebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Ecommerce">
+      <HintPath>..\Lib\CMS.Ecommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EcommerceProvider">
+      <HintPath>..\Lib\CMS.EcommerceProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EmailEngine">
+      <HintPath>..\Lib\CMS.EmailEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog">
+      <HintPath>..\Lib\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventManager">
+      <HintPath>..\Lib\CMS.EventManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ExtendedControls">
+      <HintPath>..\Lib\CMS.ExtendedControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FileSystemStorage">
+      <HintPath>..\Lib\CMS.FileSystemStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormControls">
+      <HintPath>..\Lib\CMS.FormControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine">
+      <HintPath>..\Lib\CMS.FormEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Forums">
+      <HintPath>..\Lib\CMS.Forums.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Globalization">
+      <HintPath>..\Lib\CMS.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.HealthMonitoring">
+      <HintPath>..\Lib\CMS.HealthMonitoring.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\Lib\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ImportExport">
+      <HintPath>..\Lib\CMS.ImportExport.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO">
+      <HintPath>..\Lib\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider">
+      <HintPath>..\Lib\CMS.LicenseProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider.XmlSerializers">
+      <HintPath>..\Lib\CMS.LicenseProvider.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Localization">
+      <HintPath>..\Lib\CMS.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MacroEngine">
+      <HintPath>..\Lib\CMS.MacroEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary">
+      <HintPath>..\Lib\CMS.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership">
+      <HintPath>..\Lib\CMS.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MembershipProvider">
+      <HintPath>..\Lib\CMS.MembershipProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MessageBoards">
+      <HintPath>..\Lib\CMS.MessageBoards.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Messaging">
+      <HintPath>..\Lib\CMS.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Modules">
+      <HintPath>..\Lib\CMS.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ModuleUsageTracking">
+      <HintPath>..\Lib\CMS.ModuleUsageTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Mvc">
+      <HintPath>..\Lib\CMS.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Newsletters">
+      <HintPath>..\Lib\CMS.Newsletters.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Notifications">
+      <HintPath>..\Lib\CMS.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineForms">
+      <HintPath>..\Lib\CMS.OnlineForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineMarketing">
+      <HintPath>..\Lib\CMS.OnlineMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OutputFilter">
+      <HintPath>..\Lib\CMS.OutputFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Personas">
+      <HintPath>..\Lib\CMS.Personas.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Polls">
+      <HintPath>..\Lib\CMS.Polls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalControls">
+      <HintPath>..\Lib\CMS.PortalControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine">
+      <HintPath>..\Lib\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Protection">
+      <HintPath>..\Lib\CMS.Protection.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Relationships">
+      <HintPath>..\Lib\CMS.Relationships.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Reporting">
+      <HintPath>..\Lib\CMS.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SalesForce">
+      <HintPath>..\Lib\CMS.SalesForce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Scheduler">
+      <HintPath>..\Lib\CMS.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search">
+      <HintPath>..\Lib\CMS.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.Lucene3">
+      <HintPath>..\Lib\CMS.Search.Lucene3.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.TextExtractors">
+      <HintPath>..\Lib\CMS.Search.TextExtractors.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SearchProviderSQL">
+      <HintPath>..\Lib\CMS.SearchProviderSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SharePoint">
+      <HintPath>..\Lib\CMS.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider">
+      <HintPath>..\Lib\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialMarketing">
+      <HintPath>..\Lib\CMS.SocialMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialMedia">
+      <HintPath>..\Lib\CMS.SocialMedia.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.StrandsRecommender">
+      <HintPath>..\Lib\CMS.StrandsRecommender.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization">
+      <HintPath>..\Lib\CMS.Synchronization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization.WSE3">
+      <HintPath>..\Lib\CMS.Synchronization.WSE3.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SynchronizationEngine">
+      <HintPath>..\Lib\CMS.SynchronizationEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Taxonomy">
+      <HintPath>..\Lib\CMS.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Tests">
+      <HintPath>..\Lib\CMS.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.TranslationServices">
+      <HintPath>..\Lib\CMS.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.UIControls">
+      <HintPath>..\Lib\CMS.UIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.URLRewritingEngine">
+      <HintPath>..\Lib\CMS.URLRewritingEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.VirtualPathProvider">
+      <HintPath>..\Lib\CMS.VirtualPathProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics">
+      <HintPath>..\Lib\CMS.WebAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebApi">
+      <HintPath>..\Lib\CMS.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebDAV">
+      <HintPath>..\Lib\CMS.WebDAV.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebFarmSync">
+      <HintPath>..\Lib\CMS.WebFarmSync.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebServices">
+      <HintPath>..\Lib\CMS.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WIFIntegration">
+      <HintPath>..\Lib\CMS.WIFIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WinServiceEngine">
+      <HintPath>..\Lib\CMS.WinServiceEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WorkflowEngine">
+      <HintPath>..\Lib\CMS.WorkflowEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>..\Lib\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\Lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\Lib\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\Lib\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FiftyOne.Foundation">
+      <HintPath>..\Lib\FiftyOne.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="GlobalLink.ProjectDirector.WebServices">
+      <HintPath>..\Lib\GlobalLink.ProjectDirector.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="HealthMonitoringService">
+      <HintPath>..\Lib\HealthMonitoringService.exe</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ITHit.WebDAV.Server">
+      <HintPath>..\Lib\ITHit.WebDAV.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="JSTest">
+      <HintPath>..\Lib\JSTest.dll</HintPath>
+    </Reference>
+    <Reference Include="Kentico.Google.Apis">
+      <HintPath>..\Lib\Kentico.Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkedIn">
+      <HintPath>..\Lib\LinkedIn.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToTwitter">
+      <HintPath>..\Lib\LinqToTwitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.v3">
+      <HintPath>..\Lib\Lucene.Net.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.WordNet.SynExpand">
+      <HintPath>..\Lib\Lucene.Net.WordNet.SynExpand.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxMindGEOIP">
+      <HintPath>..\Lib\MaxMindGEOIP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\Lib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\Lib\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3">
+      <HintPath>..\Lib\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\Lib\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker">
+      <HintPath>..\Lib\NetSpell.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\Lib\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenPop">
+      <HintPath>..\Lib\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFClown">
+      <HintPath>..\Lib\PDFClown.dll</HintPath>
+    </Reference>
+    <Reference Include="SchedulerService">
+      <HintPath>..\Lib\SchedulerService.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Ude, Version=0.1.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Ude.dll</HintPath>
+    </Reference>
+    <Reference Include="WebInstallerHelper, Version=7.0.5172.8866, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\WebInstallerHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ImportSettings.cs" />
+    <Compile Include="ImportProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emerge.WebsiteSetupHelper\Emerge.WebsiteSetupHelper.csproj">
+      <Project>{3ee590fd-017d-4f52-913c-e943a7ec1c1f}</Project>
+      <Name>Emerge.WebsiteSetupHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

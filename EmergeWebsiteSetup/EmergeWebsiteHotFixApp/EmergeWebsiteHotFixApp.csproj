@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2068B94A-C9EB-4D14-B92F-60806082AC40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmergeWebsiteHotFixApp</RootNamespace>
+    <AssemblyName>EmergeWebsiteHotFixApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bluespire_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\Lib\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK">
+      <HintPath>..\Lib\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\Lib\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AmazonStorage">
+      <HintPath>..\Lib\CMS.AmazonStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ApplicationDashboard">
+      <HintPath>..\Lib\CMS.ApplicationDashboard.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Automation">
+      <HintPath>..\Lib\CMS.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AzureStorage">
+      <HintPath>..\Lib\CMS.AzureStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.BannerManagement">
+      <HintPath>..\Lib\CMS.BannerManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base">
+      <HintPath>..\Lib\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Blogs">
+      <HintPath>..\Lib\CMS.Blogs.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Chat">
+      <HintPath>..\Lib\CMS.Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CKEditor">
+      <HintPath>..\Lib\CMS.CKEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CMSSiteMapProvider">
+      <HintPath>..\Lib\CMS.CMSSiteMapProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Community">
+      <HintPath>..\Lib\CMS.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Controls">
+      <HintPath>..\Lib\CMS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core">
+      <HintPath>..\Lib\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\Lib\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataCom">
+      <HintPath>..\Lib\CMS.DataCom.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\Lib\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataProviderSQL">
+      <HintPath>..\Lib\CMS.DataProviderSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine">
+      <HintPath>..\Lib\CMS.DocumentEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentWebServices">
+      <HintPath>..\Lib\CMS.DocumentWebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Ecommerce">
+      <HintPath>..\Lib\CMS.Ecommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EcommerceProvider">
+      <HintPath>..\Lib\CMS.EcommerceProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EmailEngine">
+      <HintPath>..\Lib\CMS.EmailEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog">
+      <HintPath>..\Lib\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventManager">
+      <HintPath>..\Lib\CMS.EventManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ExtendedControls">
+      <HintPath>..\Lib\CMS.ExtendedControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FileSystemStorage">
+      <HintPath>..\Lib\CMS.FileSystemStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormControls">
+      <HintPath>..\Lib\CMS.FormControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine">
+      <HintPath>..\Lib\CMS.FormEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Forums">
+      <HintPath>..\Lib\CMS.Forums.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Globalization">
+      <HintPath>..\Lib\CMS.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.HealthMonitoring">
+      <HintPath>..\Lib\CMS.HealthMonitoring.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\Lib\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ImportExport">
+      <HintPath>..\Lib\CMS.ImportExport.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO">
+      <HintPath>..\Lib\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider">
+      <HintPath>..\Lib\CMS.LicenseProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider.XmlSerializers">
+      <HintPath>..\Lib\CMS.LicenseProvider.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Localization">
+      <HintPath>..\Lib\CMS.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MacroEngine">
+      <HintPath>..\Lib\CMS.MacroEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary">
+      <HintPath>..\Lib\CMS.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership">
+      <HintPath>..\Lib\CMS.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MembershipProvider">
+      <HintPath>..\Lib\CMS.MembershipProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MessageBoards">
+      <HintPath>..\Lib\CMS.MessageBoards.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Messaging">
+      <HintPath>..\Lib\CMS.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Modules">
+      <HintPath>..\Lib\CMS.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ModuleUsageTracking">
+      <HintPath>..\Lib\CMS.ModuleUsageTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Mvc">
+      <HintPath>..\Lib\CMS.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Newsletters">
+      <HintPath>..\Lib\CMS.Newsletters.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Notifications">
+      <HintPath>..\Lib\CMS.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineForms">
+      <HintPath>..\Lib\CMS.OnlineForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineMarketing">
+      <HintPath>..\Lib\CMS.OnlineMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OutputFilter">
+      <HintPath>..\Lib\CMS.OutputFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Personas">
+      <HintPath>..\Lib\CMS.Personas.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Polls">
+      <HintPath>..\Lib\CMS.Polls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalControls">
+      <HintPath>..\Lib\CMS.PortalControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine">
+      <HintPath>..\Lib\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Protection">
+      <HintPath>..\Lib\CMS.Protection.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Relationships">
+      <HintPath>..\Lib\CMS.Relationships.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Reporting">
+      <HintPath>..\Lib\CMS.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Routing.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\CMS.Routing.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SalesForce">
+      <HintPath>..\Lib\CMS.SalesForce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Scheduler">
+      <HintPath>..\Lib\CMS.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search">
+      <HintPath>..\Lib\CMS.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.Lucene3">
+      <HintPath>..\Lib\CMS.Search.Lucene3.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.TextExtractors">
+      <HintPath>..\Lib\CMS.Search.TextExtractors.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SearchProviderSQL">
+      <HintPath>..\Lib\CMS.SearchProviderSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SharePoint">
+      <HintPath>..\Lib\CMS.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider">
+      <HintPath>..\Lib\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialMarketing">
+      <HintPath>..\Lib\CMS.SocialMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialMedia">
+      <HintPath>..\Lib\CMS.SocialMedia.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.StrandsRecommender">
+      <HintPath>..\Lib\CMS.StrandsRecommender.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization">
+      <HintPath>..\Lib\CMS.Synchronization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization.WSE3">
+      <HintPath>..\Lib\CMS.Synchronization.WSE3.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SynchronizationEngine">
+      <HintPath>..\Lib\CMS.SynchronizationEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Taxonomy">
+      <HintPath>..\Lib\CMS.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Tests">
+      <HintPath>..\Lib\CMS.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.TranslationServices">
+      <HintPath>..\Lib\CMS.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.UIControls">
+      <HintPath>..\Lib\CMS.UIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.URLRewritingEngine">
+      <HintPath>..\Lib\CMS.URLRewritingEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.VirtualPathProvider">
+      <HintPath>..\Lib\CMS.VirtualPathProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics">
+      <HintPath>..\Lib\CMS.WebAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebApi">
+      <HintPath>..\Lib\CMS.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebDAV">
+      <HintPath>..\Lib\CMS.WebDAV.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebFarmSync">
+      <HintPath>..\Lib\CMS.WebFarmSync.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebServices">
+      <HintPath>..\Lib\CMS.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WIFIntegration">
+      <HintPath>..\Lib\CMS.WIFIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WinServiceEngine">
+      <HintPath>..\Lib\CMS.WinServiceEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WorkflowEngine">
+      <HintPath>..\Lib\CMS.WorkflowEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>..\Lib\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="HotFixWindow.xaml.cs">
+      <DependentUpon>HotFixWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Resources\Messages.Designer.cs">
+      <DependentUpon>Messages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Page Include="HotFixWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bluespire.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bluespire_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Emerge.WebsiteSetupManager\Emerge.WebsiteSetupManager.csproj">
+      <Project>{097ec3d0-dda9-4b21-92f5-a70f04f8d2f3}</Project>
+      <Name>Emerge.WebsiteSetupManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy  "$(SolutionDir)\Emerge.DatabaseEngine\DatabaseSettings.xml" "$(ProjectDir)\bin\Debug" /Y
+xcopy  "$(SolutionDir)\Emerge.DatabaseEngine\DatabaseSettings.xml" "$(ProjectDir)\bin\Release" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
